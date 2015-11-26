@@ -1818,6 +1818,10 @@ innobase_start_or_create_for_mysql(void)
 		use only one buffer pool instance */
 		srv_buf_pool_instances = 1;
 	}
+	else{
+		srv_buf_pool_instances = sysconf(_SC_NPROCESSORS_ONLN);
+		fprintf(stderr, "srv_buf_pool_instances 값 : %lu\n", srv_buf_pool_instances);
+	}
 
 	srv_boot();
 
