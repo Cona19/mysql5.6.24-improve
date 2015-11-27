@@ -53,6 +53,8 @@ Created 11/5/1995 Heikki Tuuri
 #include "page0zip.h"
 #include "srv0mon.h"
 #include "buf0checksum.h"
+//add pthread to use multithread
+#include <pthread.h>
 
 /*
 		IMPLEMENTATION OF THE BUFFER POOL
@@ -1382,6 +1384,25 @@ buf_pool_free_instance(
 }
 
 /********************************************************************//**
+structure to give multi arguments to thread_buf_pool_init_instance
+*/
+typedef struct struct_arg_thread_buf_pool_init_instance{
+	buf_pool_t*	buf_pool;	/*!< in: buffer pool instance */
+	ulint		buf_pool_size;	/*!< in: size in bytes */
+	ulint		instance_no;	/*!< in: id of the instance */
+} arg_init_instance;
+
+
+/********************************************************************//**
+threads' main start function to call buf_pool_init_instance and 
+@return DB_SUCCESS if sucecss, DB_ERROR if not enough memory or error(it returns which buf_pool_init_instance returns)
+*/
+void* thread_buf_pool_init_instance(void *data){
+	arg_init_instance *args = (arg_init_instance*) data;
+	return (void*)buf_pool_init_instance(args->buf_pool, args->buf_pool_size, args->instance_no);
+}
+
+/********************************************************************//**
 Creates the buffer pool.
 @return	DB_SUCCESS if success, DB_ERROR if not enough memory or error */
 UNIV_INTERN
@@ -1393,6 +1414,12 @@ buf_pool_init(
 {
 	ulint		i;
 	const ulint	size	= total_size / n_instances;
+	//add thread pointer variable
+	pthread_t *threads = NULL;
+	arg_init_instance *args= NULL;
+	dberr_t *thread_return;
+	dberr_t init_result;
+	
 
 	ut_ad(n_instances > 0);
 	ut_ad(n_instances <= MAX_BUFFER_POOLS);
@@ -1401,17 +1428,52 @@ buf_pool_init(
 	buf_pool_ptr = (buf_pool_t*) mem_zalloc(
 		n_instances * sizeof *buf_pool_ptr);
 
-	for (i = 0; i < n_instances; i++) {
-		buf_pool_t*	ptr	= &buf_pool_ptr[i];
+	threads = (pthread_t *) mem_zalloc(n_instances * sizeof(pthread_t));
+	args = (arg_init_instance*) mem_zalloc(n_instances * sizeof(arg_init_instance));
+	thread_return = (dberr_t*) mem_zalloc(n_instances * sizeof(dberr_t));
+	fprintf(stderr, "멀티스레딩 환경 초기화\n");
 
-		if (buf_pool_init_instance(ptr, size, i) != DB_SUCCESS) {
+	for (i = 0; i < n_instances; i++) {
+		args[i].buf_pool = &buf_pool_ptr[i];
+		args[i].buf_pool_size = size;
+		args[i].instance_no = i;
+		pthread_create(&threads[i], NULL, thread_buf_pool_init_instance, (void *)&args[i]);
+		fprintf(stderr, "%lu 스레드 시작\n", i);
+	}
+	init_result = DB_SUCCESS;
+	for (i = 0; i < n_instances; i++){
+		pthread_join(threads[i], (void**)&thread_return[i]);
+		fprintf(stderr, "%lu 스레드 종료\n", i);
+		if (thread_return[i] != DB_SUCCESS){
+			if (init_result == DB_SUCCESS){
+				init_result = thread_return[i];
+			}
 
 			/* Free all the instances created so far. */
-			buf_pool_free(i);
-
-			return(DB_ERROR);
 		}
 	}
+	fprintf(stderr, "멀티스레딩 join 완료\n");
+
+	if (init_result != DB_SUCCESS){
+		fprintf(stderr, "멀티스레딩 buf_pool_init_instance 실패\n");
+		for (i = 0; i < n_instances; i++){
+			if (thread_return[i] == DB_SUCCESS){
+				buf_pool_free_instance(buf_pool_from_array(i));
+			}
+		}
+		mem_free(buf_pool_ptr);
+		buf_pool_ptr = NULL;
+
+		return (DB_ERROR);
+	}
+	else{
+		fprintf(stderr, "멀티스레딩 buf_pool_init_instance 완료\n");
+	}
+
+	mem_free(threads);
+	mem_free(args);
+	mem_free(thread_return);
+	fprintf(stderr, "free 완료\n");
 
 	buf_pool_set_sizes();
 	buf_LRU_old_ratio_update(100 * 3/ 8, FALSE);
