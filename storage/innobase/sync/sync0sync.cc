@@ -210,6 +210,7 @@ UNIV_INTERN ut_list_base_node_t  mutex_list;
 
 /** Mutex protecting the mutex_list variable */
 UNIV_INTERN ib_mutex_t mutex_list_mutex;
+UNIV_INTERN rw_lock_t mutex_list_rw_lock;
 
 #ifdef UNIV_PFS_MUTEX
 UNIV_INTERN mysql_pfs_key_t	mutex_list_mutex_key;
@@ -307,14 +308,18 @@ mutex_create_func(
 		return;
 	}
 
-	mutex_enter(&mutex_list_mutex);
+	//------- I think this part is very important because this mutex makes convoy effect!!!
+	//mutex_enter(&mutex_list_mutex);
+	rw_lock_x_lock(&mutex_list_rw_lock);
 
 	ut_ad(UT_LIST_GET_LEN(mutex_list) == 0
 	      || UT_LIST_GET_FIRST(mutex_list)->magic_n == MUTEX_MAGIC_N);
 
 	UT_LIST_ADD_FIRST(list, mutex_list, mutex);
 
-	mutex_exit(&mutex_list_mutex);
+	rw_lock_x_unlock(&mutex_list_rw_lock);
+
+	//mutex_exit(&mutex_list_mutex);
 }
 
 /******************************************************************//**
@@ -1461,6 +1466,8 @@ sync_init(void)
 	UT_LIST_INIT(mutex_list);
 	mutex_create(mutex_list_mutex_key, &mutex_list_mutex,
 		     SYNC_NO_ORDER_CHECK);
+	rw_lock_create(mutex_list_mutex_key, &mutex_list_rw_lock,
+		     SYNC_NO_ORDER_CHECK);
 #ifdef UNIV_SYNC_DEBUG
 	mutex_create(sync_thread_mutex_key, &sync_thread_mutex,
 		     SYNC_NO_ORDER_CHECK);
@@ -1538,6 +1545,7 @@ sync_close(void)
 	}
 
 	mutex_free(&mutex_list_mutex);
+	rw_lock_free(&mutex_list_rw_lock);
 #ifdef UNIV_SYNC_DEBUG
 	mutex_free(&sync_thread_mutex);
 
