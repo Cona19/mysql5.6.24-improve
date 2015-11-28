@@ -1614,3 +1614,42 @@ sync_print(
 
 	sync_print_wait_info(file);
 }
+
+int x = 1;
+
+UNIV_INTERN void helloAA(){
+	int prev = os_atomic_test_and_set_ulint(&x, 2);
+
+	fprintf(stderr,"%d %d It succeeded!\n", x, prev);
+}
+/*
+typedef struct MyListNode_{
+
+	ib_mutex_t mutex;
+	struct MyListNode_ *next;
+	struct MyListNode_ *prev;
+}MyListNode;
+
+UNIV_INTERN void initMyList(){
+}
+
+UNIV_INTERN void insertList(List& list, Type& elem, size_t offset){
+	ut_list_node<Type>&	elem_node = ut_elem_get_node(elem, offset);
+	elem_node.prev = 0;
+ 	elem_node.next = list.start;
+
+	if (list.start != 0) {
+		ut_list_node<Type>&	base_node =
+			ut_elem_get_node(*list.start, offset);
+
+		ut_ad(list.start != &elem);
+
+		base_node.prev = &elem;
+	}
+
+	list.start = &elem;
+
+	if (list.end == 0) {
+		list.end = &elem;
+	}
+}*/

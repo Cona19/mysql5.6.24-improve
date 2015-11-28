@@ -1431,6 +1431,7 @@ buf_pool_init(
 	threads = (pthread_t *) mem_zalloc(n_instances * sizeof(pthread_t));
 	args = (arg_init_instance*) mem_zalloc(n_instances * sizeof(arg_init_instance));
 	thread_return = (dberr_t*) mem_zalloc(n_instances * sizeof(dberr_t));
+	helloAA();
 	fprintf(stderr, "멀티스레딩 환경 초기화\n");
 
 	for (i = 0; i < n_instances; i++) {
