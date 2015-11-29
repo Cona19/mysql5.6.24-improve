@@ -152,15 +152,19 @@ ut_list_prepend_concur(
 	ut_list_node<Type>&	elem_node = ut_elem_get_node(elem, offset);
 
  	elem_node.prev = 0;
+	elem_node.next = __sync_lock_test_and_set(&list.start, &elem);
 
-	elem_node.next = __sync_lock_test_and_set(&list.start, elem_node);
-	elem.next.prev = elem;
+	if (elem_node.next != 0){
+		ut_list_node<Type>&	base_node =
+			ut_elem_get_node(*elem_node.next, offset);
 
-	__sync_fetch_and_add(&list.count, 1);
-
-	if (elem_node.next == 0) {
+		base_node.prev = &elem;
+	}
+	else{
 		list.end = &elem;
 	}
+
+	__sync_fetch_and_add(&list.count, 1);
 }
 
 /*******************************************************************//**

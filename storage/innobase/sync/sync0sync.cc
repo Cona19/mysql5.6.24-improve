@@ -308,14 +308,14 @@ mutex_create_func(
 	}
 
 	//------- I think this part is very important because this mutex makes convoy effect!!!
-	mutex_enter(&mutex_list_mutex);
+	//mutex_enter(&mutex_list_mutex);
 
 	ut_ad(UT_LIST_GET_LEN_CONCUR(mutex_list) == 0
 	      || UT_LIST_GET_FIRST_CONCUR(mutex_list)->magic_n == MUTEX_MAGIC_N);
 
 	UT_LIST_ADD_FIRST_CONCUR(list, mutex_list, mutex);
 
-	mutex_exit(&mutex_list_mutex);
+	//mutex_exit(&mutex_list_mutex);
 }
 
 /******************************************************************//**
