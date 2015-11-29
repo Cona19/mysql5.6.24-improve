@@ -841,6 +841,5 @@ os_atomic_inc_ulint_func(
 #ifndef UNIV_NONINL
 #include "sync0sync.ic"
 #endif
-UNIV_INTERN void helloAA();
 
 #endif

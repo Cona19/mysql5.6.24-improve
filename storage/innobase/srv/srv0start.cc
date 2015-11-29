@@ -1820,7 +1820,7 @@ innobase_start_or_create_for_mysql(void)
 	}
 	else{
 		srv_buf_pool_instances = sysconf(_SC_NPROCESSORS_ONLN);
-		fprintf(stderr, "srv_buf_pool_instances 값 : %lu\n", srv_buf_pool_instances);
+		//fprintf(stderr, "srv_buf_pool_instances 값 : %lu\n", srv_buf_pool_instances);
 	}
 
 	srv_boot();

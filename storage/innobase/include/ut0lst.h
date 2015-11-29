@@ -354,7 +354,7 @@ its length.
 	(BASE).count
 
 #define UT_LIST_GET_LEN_CONCUR(BASE)\
-	__sync_fetch_and_add(&((BASE).count), 0)
+	/*__sync_fetch_and_add(&(*/(BASE).count//), 0)
 
 /********************************************************************//**
 Gets the first node in a two-way list.
@@ -364,7 +364,7 @@ Gets the first node in a two-way list.
 	(BASE).start
 
 #define UT_LIST_GET_FIRST_CONCUR(BASE)\
-	__sync_fetch_and_add(&((BASE).start), 0)
+	/*__sync_fetch_and_add(&(*/(BASE).start//), 0)
 	
 
 /********************************************************************//**

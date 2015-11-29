@@ -1431,20 +1431,19 @@ buf_pool_init(
 	threads = (pthread_t *) mem_zalloc(n_instances * sizeof(pthread_t));
 	args = (arg_init_instance*) mem_zalloc(n_instances * sizeof(arg_init_instance));
 	thread_return = (dberr_t*) mem_zalloc(n_instances * sizeof(dberr_t));
-	helloAA();
-	fprintf(stderr, "멀티스레딩 환경 초기화\n");
+	//fprintf(stderr, "멀티스레딩 환경 초기화\n");
 
 	for (i = 0; i < n_instances; i++) {
 		args[i].buf_pool = &buf_pool_ptr[i];
 		args[i].buf_pool_size = size;
 		args[i].instance_no = i;
 		pthread_create(&threads[i], NULL, thread_buf_pool_init_instance, (void *)&args[i]);
-		fprintf(stderr, "%lu 스레드 시작\n", i);
+		//fprintf(stderr, "%lu 스레드 시작\n", i);
 	}
 	init_result = DB_SUCCESS;
 	for (i = 0; i < n_instances; i++){
 		pthread_join(threads[i], (void**)&thread_return[i]);
-		fprintf(stderr, "%lu 스레드 종료\n", i);
+		//fprintf(stderr, "%lu 스레드 종료\n", i);
 		if (thread_return[i] != DB_SUCCESS){
 			if (init_result == DB_SUCCESS){
 				init_result = thread_return[i];
@@ -1453,10 +1452,10 @@ buf_pool_init(
 			/* Free all the instances created so far. */
 		}
 	}
-	fprintf(stderr, "멀티스레딩 join 완료\n");
+	//fprintf(stderr, "멀티스레딩 join 완료\n");
 
 	if (init_result != DB_SUCCESS){
-		fprintf(stderr, "멀티스레딩 buf_pool_init_instance 실패\n");
+		//fprintf(stderr, "멀티스레딩 buf_pool_init_instance 실패\n");
 		for (i = 0; i < n_instances; i++){
 			if (thread_return[i] == DB_SUCCESS){
 				buf_pool_free_instance(buf_pool_from_array(i));
@@ -1467,14 +1466,14 @@ buf_pool_init(
 
 		return (DB_ERROR);
 	}
-	else{
+	/*else{
 		fprintf(stderr, "멀티스레딩 buf_pool_init_instance 완료\n");
-	}
+	}*/
 
 	mem_free(threads);
 	mem_free(args);
 	mem_free(thread_return);
-	fprintf(stderr, "free 완료\n");
+	//fprintf(stderr, "free 완료\n");
 
 	buf_pool_set_sizes();
 	buf_LRU_old_ratio_update(100 * 3/ 8, FALSE);
