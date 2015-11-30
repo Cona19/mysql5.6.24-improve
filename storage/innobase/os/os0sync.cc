@@ -340,6 +340,15 @@ os_sync_free(void)
 	os_sync_free_called = FALSE;
 }
 
+int cntMalloc;
+
+UNIV_INTERN void os_event_malloc_init(void){
+	cntMalloc = 0;
+}
+UNIV_INTERN os_event_t os_event_malloc(){
+	return static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
+}
+
 /*********************************************************//**
 Creates an event semaphore, i.e., a semaphore which may just have two
 states: signaled and nonsignaled. The created event is manual reset: it
@@ -355,7 +364,8 @@ os_event_create(void)
 #ifdef __WIN__
 	if(!srv_use_native_conditions) {
 
-		event = static_cast<os_event_t>(ut_malloc(sizeof(*event)));
+		event = os_event_malloc();
+		__sync_fetch_and_add(&cntMalloc, 1);
 
 		event->handle = CreateEvent(NULL, TRUE, FALSE, NULL);
 		if (!event->handle) {
@@ -396,6 +406,7 @@ os_event_create(void)
 	}*/
 
 	/* Put to the list of events */
+	//UT_LIST_ADD_FIRST(os_event_list, os_event_list, event);
 	UT_LIST_ADD_FIRST_CONCUR(os_event_list, os_event_list, event);
 
 	//os_event_count++;

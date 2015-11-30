@@ -1945,7 +1945,11 @@ innobase_start_or_create_for_mysql(void)
 		unit = 'M';
 	}
 
+	//added to initialize before log print
+	os_event_malloc_init();
+
 	/* Print time to initialize the buffer pool */
+	
 	ib_logf(IB_LOG_LEVEL_INFO,
 		"Initializing buffer pool, size = %.1f%c", size, unit);
 
