@@ -352,7 +352,7 @@ UNIV_INTERN void os_event_malloc_init(void){
 	cnt = 0;
 }
 
-UNIV_INLINE os_event_t os_event_malloc(){
+UNIV_INTERN os_event_t os_event_malloc(){
 	unsigned int x;
 	x = __sync_fetch_and_add(&cnt, 1);
 	if (x < SIZE_OS_EVENT_POOL){ 
