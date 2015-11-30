@@ -1,0 +1,2605 @@
+Performing C++ SOURCE FILE Test HAVE_LLVM_LIBCPP failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1721051788/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1721051788.dir/build.make CMakeFiles/cmTryCompileExec1721051788.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1721051788.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_LLVM_LIBCPP   -o CMakeFiles/cmTryCompileExec1721051788.dir/src.cxx.o -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1721051788
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1721051788.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_LLVM_LIBCPP    CMakeFiles/cmTryCompileExec1721051788.dir/src.cxx.o  -o cmTryCompileExec1721051788 -rdynamic 
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+#include <ciso646>
+int main()
+{
+#ifdef _LIBCPP_VERSION
+  return 0;
+#else
+  return 1;
+#endif
+}
+Determining if the function floor exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4107204614/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4107204614.dir/build.make CMakeFiles/cmTryCompileExec4107204614.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4107204614.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=floor   -o CMakeFiles/cmTryCompileExec4107204614.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘floor’
+/usr/share/cmake-2.8/Modules/CheckFunctionExists.c:3:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTryCompileExec4107204614
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4107204614.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=floor    CMakeFiles/cmTryCompileExec4107204614.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4107204614 -rdynamic 
+CMakeFiles/cmTryCompileExec4107204614.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `floor'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec4107204614.dir/build.make:88: recipe for target 'cmTryCompileExec4107204614' failed
+make[1]: *** [cmTryCompileExec4107204614] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4107204614/fast' failed
+make: *** [cmTryCompileExec4107204614/fast] Error 2
+
+
+Determining if the function crypt exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec820512524/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec820512524.dir/build.make CMakeFiles/cmTryCompileExec820512524.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec820512524.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=crypt   -o CMakeFiles/cmTryCompileExec820512524.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec820512524
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec820512524.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=crypt    CMakeFiles/cmTryCompileExec820512524.dir/CheckFunctionExists.c.o  -o cmTryCompileExec820512524 -rdynamic 
+CMakeFiles/cmTryCompileExec820512524.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `crypt'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec820512524.dir/build.make:88: recipe for target 'cmTryCompileExec820512524' failed
+make[1]: *** [cmTryCompileExec820512524] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec820512524/fast' failed
+make: *** [cmTryCompileExec820512524/fast] Error 2
+
+
+Determining if the function dlopen exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1149797102/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1149797102.dir/build.make CMakeFiles/cmTryCompileExec1149797102.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1149797102.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dlopen   -o CMakeFiles/cmTryCompileExec1149797102.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1149797102
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1149797102.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dlopen    CMakeFiles/cmTryCompileExec1149797102.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1149797102 -rdynamic 
+CMakeFiles/cmTryCompileExec1149797102.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `dlopen'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1149797102.dir/build.make:88: recipe for target 'cmTryCompileExec1149797102' failed
+make[1]: *** [cmTryCompileExec1149797102] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1149797102/fast' failed
+make: *** [cmTryCompileExec1149797102/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2448291648/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2448291648.dir/build.make CMakeFiles/cmTryCompileExec2448291648.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2448291648.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2448291648.dir/CheckSymbolExists.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2448291648
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2448291648.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec2448291648.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2448291648 -rdynamic 
+CMakeFiles/cmTryCompileExec2448291648.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xa): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2448291648.dir/build.make:88: recipe for target 'cmTryCompileExec2448291648' failed
+make[1]: *** [cmTryCompileExec2448291648] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2448291648/fast' failed
+make: *** [cmTryCompileExec2448291648/fast] Error 2
+
+File /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1517130334/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1517130334.dir/build.make CMakeFiles/cmTryCompileExec1517130334.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1517130334.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1517130334.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1517130334
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1517130334.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1517130334.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1517130334 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1517130334.dir/build.make:88: recipe for target 'cmTryCompileExec1517130334' failed
+make[1]: *** [cmTryCompileExec1517130334] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1517130334/fast' failed
+make: *** [cmTryCompileExec1517130334/fast] Error 2
+
+
+Determining if files cxxabi.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3010103850/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3010103850.dir/build.make CMakeFiles/cmTryCompileExec3010103850.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3010103850.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3010103850.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: cxxabi.h: 그런 파일이나 디렉터리가 없습니다
+ #include <cxxabi.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3010103850.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3010103850.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3010103850.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3010103850/fast' failed
+make: *** [cmTryCompileExec3010103850/fast] Error 2
+
+Source:
+/* */
+#include <cxxabi.h>
+
+
+int main(){return 0;}
+
+Determining if files floatingpoint.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1783461416/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1783461416.dir/build.make CMakeFiles/cmTryCompileExec1783461416.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1783461416.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1783461416.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:27: fatal error: floatingpoint.h: 그런 파일이나 디렉터리가 없습니다
+ #include <floatingpoint.h>
+                           ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1783461416.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1783461416.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1783461416.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1783461416/fast' failed
+make: *** [cmTryCompileExec1783461416/fast] Error 2
+
+Source:
+/* */
+#include <floatingpoint.h>
+
+
+int main(){return 0;}
+
+Determining if files ieeefp.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec519141813/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec519141813.dir/build.make CMakeFiles/cmTryCompileExec519141813.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec519141813.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec519141813.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: ieeefp.h: 그런 파일이나 디렉터리가 없습니다
+ #include <ieeefp.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec519141813.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec519141813.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec519141813.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec519141813/fast' failed
+make: *** [cmTryCompileExec519141813/fast] Error 2
+
+Source:
+/* */
+#include <ieeefp.h>
+
+
+int main(){return 0;}
+
+Determining if files ndir.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2224274892/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2224274892.dir/build.make CMakeFiles/cmTryCompileExec2224274892.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2224274892.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2224274892.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:18: fatal error: ndir.h: 그런 파일이나 디렉터리가 없습니다
+ #include <ndir.h>
+                  ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2224274892.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2224274892.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2224274892.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2224274892/fast' failed
+make: *** [cmTryCompileExec2224274892/fast] Error 2
+
+Source:
+/* */
+#include <ndir.h>
+
+
+int main(){return 0;}
+
+Determining if files port.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3396939479/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3396939479.dir/build.make CMakeFiles/cmTryCompileExec3396939479.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3396939479.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3396939479.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:18: fatal error: port.h: 그런 파일이나 디렉터리가 없습니다
+ #include <port.h>
+                  ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3396939479.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3396939479.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3396939479.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3396939479/fast' failed
+make: *** [cmTryCompileExec3396939479/fast] Error 2
+
+Source:
+/* */
+#include <port.h>
+
+
+int main(){return 0;}
+
+Determining if files select.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4291292917/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4291292917.dir/build.make CMakeFiles/cmTryCompileExec4291292917.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4291292917.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4291292917.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: select.h: 그런 파일이나 디렉터리가 없습니다
+ #include <select.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4291292917.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4291292917.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4291292917.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4291292917/fast' failed
+make: *** [cmTryCompileExec4291292917/fast] Error 2
+
+Source:
+/* */
+#include <select.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/ndir.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1803521290/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1803521290.dir/build.make CMakeFiles/cmTryCompileExec1803521290.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1803521290.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1803521290.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:22: fatal error: sys/ndir.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/ndir.h>
+                      ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1803521290.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1803521290.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1803521290.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1803521290/fast' failed
+make: *** [cmTryCompileExec1803521290/fast] Error 2
+
+Source:
+/* */
+#include <sys/ndir.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/pte.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2883523831/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2883523831.dir/build.make CMakeFiles/cmTryCompileExec2883523831.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2883523831.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2883523831.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:21: fatal error: sys/pte.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/pte.h>
+                     ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2883523831.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2883523831.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2883523831.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2883523831/fast' failed
+make: *** [cmTryCompileExec2883523831/fast] Error 2
+
+Source:
+/* */
+#include <sys/pte.h>
+
+
+int main(){return 0;}
+
+Determining if files synch.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1264751068/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1264751068.dir/build.make CMakeFiles/cmTryCompileExec1264751068.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1264751068.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1264751068.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:19: fatal error: synch.h: 그런 파일이나 디렉터리가 없습니다
+ #include <synch.h>
+                   ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1264751068.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1264751068.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1264751068.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1264751068/fast' failed
+make: *** [cmTryCompileExec1264751068/fast] Error 2
+
+Source:
+/* */
+#include <synch.h>
+
+
+int main(){return 0;}
+
+Determining if files sysent.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2399024103/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2399024103.dir/build.make CMakeFiles/cmTryCompileExec2399024103.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2399024103.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2399024103.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: sysent.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sysent.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2399024103.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2399024103.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2399024103.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2399024103/fast' failed
+make: *** [cmTryCompileExec2399024103/fast] Error 2
+
+Source:
+/* */
+#include <sysent.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/fpu.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3864020994/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3864020994.dir/build.make CMakeFiles/cmTryCompileExec3864020994.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3864020994.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3864020994.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:21: fatal error: sys/fpu.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/fpu.h>
+                     ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3864020994.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3864020994.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3864020994.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3864020994/fast' failed
+make: *** [cmTryCompileExec3864020994/fast] Error 2
+
+Source:
+/* */
+#include <sys/fpu.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/malloc.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec868774860/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec868774860.dir/build.make CMakeFiles/cmTryCompileExec868774860.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec868774860.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec868774860.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:24: fatal error: sys/malloc.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/malloc.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec868774860.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec868774860.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec868774860.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec868774860/fast' failed
+make: *** [cmTryCompileExec868774860/fast] Error 2
+
+Source:
+/* */
+#include <sys/malloc.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/stream.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec984709116/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec984709116.dir/build.make CMakeFiles/cmTryCompileExec984709116.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec984709116.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec984709116.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:24: fatal error: sys/stream.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/stream.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec984709116.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec984709116.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec984709116.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec984709116/fast' failed
+make: *** [cmTryCompileExec984709116/fast] Error 2
+
+Source:
+/* */
+#include <sys/stream.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/termcap.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3661516323/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3661516323.dir/build.make CMakeFiles/cmTryCompileExec3661516323.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3661516323.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3661516323.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/termcap.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/termcap.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3661516323.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3661516323.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3661516323.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3661516323/fast' failed
+make: *** [cmTryCompileExec3661516323/fast] Error 2
+
+Source:
+/* */
+#include <sys/termcap.h>
+
+
+int main(){return 0;}
+
+Determining if files termbits.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4030434696/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4030434696.dir/build.make CMakeFiles/cmTryCompileExec4030434696.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4030434696.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4030434696.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:22: fatal error: termbits.h: 그런 파일이나 디렉터리가 없습니다
+ #include <termbits.h>
+                      ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4030434696.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4030434696.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4030434696.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4030434696/fast' failed
+make: *** [cmTryCompileExec4030434696/fast] Error 2
+
+Source:
+/* */
+#include <termbits.h>
+
+
+int main(){return 0;}
+
+Determining if files varargs.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1776408347/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1776408347.dir/build.make CMakeFiles/cmTryCompileExec1776408347.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1776408347.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1776408347.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+In file included from /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:0:
+/usr/lib/gcc/i686-linux-gnu/4.9/include/varargs.h:4:2: error: #error "GCC no longer implements <varargs.h>."
+ #error "GCC no longer implements <varargs.h>."
+  ^
+/usr/lib/gcc/i686-linux-gnu/4.9/include/varargs.h:5:2: error: #error "Revise your code to use <stdarg.h>."
+ #error "Revise your code to use <stdarg.h>."
+  ^
+CMakeFiles/cmTryCompileExec1776408347.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1776408347.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1776408347.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1776408347/fast' failed
+make: *** [cmTryCompileExec1776408347/fast] Error 2
+
+Source:
+/* */
+#include <varargs.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/utime.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2901732751/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2901732751.dir/build.make CMakeFiles/cmTryCompileExec2901732751.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2901732751.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2901732751.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:23: fatal error: sys/utime.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/utime.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2901732751.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2901732751.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2901732751.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2901732751/fast' failed
+make: *** [cmTryCompileExec2901732751/fast] Error 2
+
+Source:
+/* */
+#include <sys/utime.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/vadvise.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1098065929/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1098065929.dir/build.make CMakeFiles/cmTryCompileExec1098065929.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1098065929.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1098065929.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/vadvise.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/vadvise.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1098065929.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1098065929.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1098065929.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1098065929/fast' failed
+make: *** [cmTryCompileExec1098065929/fast] Error 2
+
+Source:
+/* */
+#include <sys/vadvise.h>
+
+
+int main(){return 0;}
+
+Determining if files vis.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3061057999/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3061057999.dir/build.make CMakeFiles/cmTryCompileExec3061057999.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3061057999.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3061057999.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:17: fatal error: vis.h: 그런 파일이나 디렉터리가 없습니다
+ #include <vis.h>
+                 ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3061057999.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3061057999.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3061057999.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3061057999/fast' failed
+make: *** [cmTryCompileExec3061057999/fast] Error 2
+
+Source:
+/* */
+#include <vis.h>
+
+
+int main(){return 0;}
+
+Determining if files sasl/sasl.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2363166946/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2363166946.dir/build.make CMakeFiles/cmTryCompileExec2363166946.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2363166946.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2363166946.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:23: fatal error: sasl/sasl.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sasl/sasl.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2363166946.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2363166946.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2363166946.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2363166946/fast' failed
+make: *** [cmTryCompileExec2363166946/fast] Error 2
+
+Source:
+/* */
+#include <sasl/sasl.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/devpoll.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2513930450/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2513930450.dir/build.make CMakeFiles/cmTryCompileExec2513930450.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2513930450.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2513930450.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/devpoll.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/devpoll.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2513930450.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2513930450.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2513930450.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2513930450/fast' failed
+make: *** [cmTryCompileExec2513930450/fast] Error 2
+
+Source:
+/* */
+#include <sys/devpoll.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/devpoll.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1462037417/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1462037417.dir/build.make CMakeFiles/cmTryCompileExec1462037417.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1462037417.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1462037417.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:25: fatal error: sys/devpoll.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/devpoll.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1462037417.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1462037417.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1462037417.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1462037417/fast' failed
+make: *** [cmTryCompileExec1462037417/fast] Error 2
+
+Source:
+/* */
+#include <sys/devpoll.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/event.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3820118494/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3820118494.dir/build.make CMakeFiles/cmTryCompileExec3820118494.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3820118494.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3820118494.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:23: fatal error: sys/event.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/event.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3820118494.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3820118494.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3820118494.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3820118494/fast' failed
+make: *** [cmTryCompileExec3820118494/fast] Error 2
+
+Source:
+/* */
+#include <sys/event.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/ptem.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1999252895/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1999252895.dir/build.make CMakeFiles/cmTryCompileExec1999252895.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1999252895.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1999252895.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:22: fatal error: sys/ptem.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/ptem.h>
+                      ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1999252895.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1999252895.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1999252895.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1999252895/fast' failed
+make: *** [cmTryCompileExec1999252895/fast] Error 2
+
+Source:
+/* */
+#include <sys/ptem.h>
+
+
+int main(){return 0;}
+
+Determining if the function _aligned_malloc exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2897962249/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2897962249.dir/build.make CMakeFiles/cmTryCompileExec2897962249.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2897962249.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_aligned_malloc   -o CMakeFiles/cmTryCompileExec2897962249.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2897962249
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2897962249.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_aligned_malloc    CMakeFiles/cmTryCompileExec2897962249.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2897962249 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2897962249.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `_aligned_malloc'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2897962249.dir/build.make:88: recipe for target 'cmTryCompileExec2897962249' failed
+make[1]: *** [cmTryCompileExec2897962249] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2897962249/fast' failed
+make: *** [cmTryCompileExec2897962249/fast] Error 2
+
+
+Determining if the function _aligned_free exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2863291605/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2863291605.dir/build.make CMakeFiles/cmTryCompileExec2863291605.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2863291605.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_aligned_free   -o CMakeFiles/cmTryCompileExec2863291605.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2863291605
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2863291605.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_aligned_free    CMakeFiles/cmTryCompileExec2863291605.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2863291605 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2863291605.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `_aligned_free'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2863291605.dir/build.make:88: recipe for target 'cmTryCompileExec2863291605' failed
+make[1]: *** [cmTryCompileExec2863291605] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2863291605/fast' failed
+make: *** [cmTryCompileExec2863291605/fast] Error 2
+
+
+Determining if the function aio_read exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3497555678/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3497555678.dir/build.make CMakeFiles/cmTryCompileExec3497555678.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3497555678.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=aio_read   -o CMakeFiles/cmTryCompileExec3497555678.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3497555678
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3497555678.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=aio_read    CMakeFiles/cmTryCompileExec3497555678.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3497555678 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3497555678.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `aio_read'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3497555678.dir/build.make:88: recipe for target 'cmTryCompileExec3497555678' failed
+make[1]: *** [cmTryCompileExec3497555678] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3497555678/fast' failed
+make: *** [cmTryCompileExec3497555678/fast] Error 2
+
+
+Determining if the function printstack exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1240832942/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1240832942.dir/build.make CMakeFiles/cmTryCompileExec1240832942.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1240832942.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=printstack   -o CMakeFiles/cmTryCompileExec1240832942.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1240832942
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1240832942.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=printstack    CMakeFiles/cmTryCompileExec1240832942.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1240832942 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1240832942.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `printstack'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1240832942.dir/build.make:88: recipe for target 'cmTryCompileExec1240832942' failed
+make[1]: *** [cmTryCompileExec1240832942] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1240832942/fast' failed
+make: *** [cmTryCompileExec1240832942/fast] Error 2
+
+
+Determining if the function bmove exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4207941709/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4207941709.dir/build.make CMakeFiles/cmTryCompileExec4207941709.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4207941709.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=bmove   -o CMakeFiles/cmTryCompileExec4207941709.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4207941709
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4207941709.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=bmove    CMakeFiles/cmTryCompileExec4207941709.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4207941709 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec4207941709.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `bmove'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec4207941709.dir/build.make:88: recipe for target 'cmTryCompileExec4207941709' failed
+make[1]: *** [cmTryCompileExec4207941709] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4207941709/fast' failed
+make: *** [cmTryCompileExec4207941709/fast] Error 2
+
+
+Determining if the function directio exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3488643380/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3488643380.dir/build.make CMakeFiles/cmTryCompileExec3488643380.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3488643380.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=directio   -o CMakeFiles/cmTryCompileExec3488643380.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3488643380
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3488643380.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=directio    CMakeFiles/cmTryCompileExec3488643380.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3488643380 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3488643380.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `directio'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3488643380.dir/build.make:88: recipe for target 'cmTryCompileExec3488643380' failed
+make[1]: *** [cmTryCompileExec3488643380] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3488643380/fast' failed
+make: *** [cmTryCompileExec3488643380/fast] Error 2
+
+
+Determining if the function _doprnt exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2553870091/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2553870091.dir/build.make CMakeFiles/cmTryCompileExec2553870091.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2553870091.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_doprnt   -o CMakeFiles/cmTryCompileExec2553870091.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2553870091
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2553870091.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_doprnt    CMakeFiles/cmTryCompileExec2553870091.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2553870091 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2553870091.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `_doprnt'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2553870091.dir/build.make:88: recipe for target 'cmTryCompileExec2553870091' failed
+make[1]: *** [cmTryCompileExec2553870091] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2553870091/fast' failed
+make: *** [cmTryCompileExec2553870091/fast] Error 2
+
+
+Determining if the function compress exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1164803455/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1164803455.dir/build.make CMakeFiles/cmTryCompileExec1164803455.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1164803455.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=compress   -o CMakeFiles/cmTryCompileExec1164803455.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1164803455
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1164803455.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=compress    CMakeFiles/cmTryCompileExec1164803455.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1164803455 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1164803455.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `compress'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1164803455.dir/build.make:88: recipe for target 'cmTryCompileExec1164803455' failed
+make[1]: *** [cmTryCompileExec1164803455] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1164803455/fast' failed
+make: *** [cmTryCompileExec1164803455/fast] Error 2
+
+
+Determining if the function fconvert exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3302565146/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3302565146.dir/build.make CMakeFiles/cmTryCompileExec3302565146.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3302565146.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fconvert   -o CMakeFiles/cmTryCompileExec3302565146.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3302565146
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3302565146.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fconvert    CMakeFiles/cmTryCompileExec3302565146.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3302565146 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3302565146.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `fconvert'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3302565146.dir/build.make:88: recipe for target 'cmTryCompileExec3302565146' failed
+make[1]: *** [cmTryCompileExec3302565146] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3302565146/fast' failed
+make: *** [cmTryCompileExec3302565146/fast] Error 2
+
+
+Determining if the function fpsetmask exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3042347307/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3042347307.dir/build.make CMakeFiles/cmTryCompileExec3042347307.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3042347307.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fpsetmask   -o CMakeFiles/cmTryCompileExec3042347307.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3042347307
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3042347307.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fpsetmask    CMakeFiles/cmTryCompileExec3042347307.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3042347307 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3042347307.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `fpsetmask'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3042347307.dir/build.make:88: recipe for target 'cmTryCompileExec3042347307' failed
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3042347307] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3042347307/fast' failed
+make: *** [cmTryCompileExec3042347307/fast] Error 2
+
+
+Determining if the function gethrtime exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1574889072/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1574889072.dir/build.make CMakeFiles/cmTryCompileExec1574889072.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1574889072.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethrtime   -o CMakeFiles/cmTryCompileExec1574889072.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1574889072
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1574889072.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethrtime    CMakeFiles/cmTryCompileExec1574889072.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1574889072 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1574889072.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `gethrtime'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1574889072.dir/build.make:88: recipe for target 'cmTryCompileExec1574889072' failed
+make[1]: *** [cmTryCompileExec1574889072] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1574889072/fast' failed
+make: *** [cmTryCompileExec1574889072/fast] Error 2
+
+
+Determining if the function getpassphrase exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1771272602/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1771272602.dir/build.make CMakeFiles/cmTryCompileExec1771272602.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1771272602.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getpassphrase   -o CMakeFiles/cmTryCompileExec1771272602.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1771272602
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1771272602.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getpassphrase    CMakeFiles/cmTryCompileExec1771272602.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1771272602 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1771272602.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `getpassphrase'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1771272602.dir/build.make:88: recipe for target 'cmTryCompileExec1771272602' failed
+make[1]: *** [cmTryCompileExec1771272602] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1771272602/fast' failed
+make: *** [cmTryCompileExec1771272602/fast] Error 2
+
+
+Determining if the function issetugid exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec547948084/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec547948084.dir/build.make CMakeFiles/cmTryCompileExec547948084.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec547948084.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=issetugid   -o CMakeFiles/cmTryCompileExec547948084.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec547948084
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec547948084.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=issetugid    CMakeFiles/cmTryCompileExec547948084.dir/CheckFunctionExists.c.o  -o cmTryCompileExec547948084 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec547948084.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `issetugid'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec547948084.dir/build.make:88: recipe for target 'cmTryCompileExec547948084' failed
+make[1]: *** [cmTryCompileExec547948084] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec547948084/fast' failed
+make: *** [cmTryCompileExec547948084/fast] Error 2
+
+
+Determining if the function port_create exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1373230689/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1373230689.dir/build.make CMakeFiles/cmTryCompileExec1373230689.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1373230689.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=port_create   -o CMakeFiles/cmTryCompileExec1373230689.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1373230689
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1373230689.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=port_create    CMakeFiles/cmTryCompileExec1373230689.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1373230689 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1373230689.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `port_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1373230689.dir/build.make:88: recipe for target 'cmTryCompileExec1373230689' failed
+make[1]: *** [cmTryCompileExec1373230689] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1373230689/fast' failed
+make: *** [cmTryCompileExec1373230689/fast] Error 2
+
+
+Determining if the function pthread_attr_create exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4089829448/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4089829448.dir/build.make CMakeFiles/cmTryCompileExec4089829448.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4089829448.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_attr_create   -o CMakeFiles/cmTryCompileExec4089829448.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4089829448
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4089829448.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_attr_create    CMakeFiles/cmTryCompileExec4089829448.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4089829448 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec4089829448.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `pthread_attr_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec4089829448.dir/build.make:88: recipe for target 'cmTryCompileExec4089829448' failed
+make[1]: *** [cmTryCompileExec4089829448] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4089829448/fast' failed
+make: *** [cmTryCompileExec4089829448/fast] Error 2
+
+
+Determining if the function pthread_condattr_create exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3587369135/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3587369135.dir/build.make CMakeFiles/cmTryCompileExec3587369135.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3587369135.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_condattr_create   -o CMakeFiles/cmTryCompileExec3587369135.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3587369135
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3587369135.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_condattr_create    CMakeFiles/cmTryCompileExec3587369135.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3587369135 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3587369135.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `pthread_condattr_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3587369135.dir/build.make:88: recipe for target 'cmTryCompileExec3587369135' failed
+make[1]: *** [cmTryCompileExec3587369135] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3587369135/fast' failed
+make: *** [cmTryCompileExec3587369135/fast] Error 2
+
+
+Determining if the function pthread_threadmask exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2695186547/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2695186547.dir/build.make CMakeFiles/cmTryCompileExec2695186547.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2695186547.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_threadmask   -o CMakeFiles/cmTryCompileExec2695186547.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2695186547
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2695186547.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_threadmask    CMakeFiles/cmTryCompileExec2695186547.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2695186547 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2695186547.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `pthread_threadmask'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2695186547.dir/build.make:88: recipe for target 'cmTryCompileExec2695186547' failed
+make[1]: *** [cmTryCompileExec2695186547] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2695186547/fast' failed
+make: *** [cmTryCompileExec2695186547/fast] Error 2
+
+
+Determining if the function pthread_yield_np exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2415659348/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2415659348.dir/build.make CMakeFiles/cmTryCompileExec2415659348.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2415659348.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_yield_np   -o CMakeFiles/cmTryCompileExec2415659348.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2415659348
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2415659348.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_yield_np    CMakeFiles/cmTryCompileExec2415659348.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2415659348 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2415659348.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `pthread_yield_np'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2415659348.dir/build.make:88: recipe for target 'cmTryCompileExec2415659348' failed
+make[1]: *** [cmTryCompileExec2415659348] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2415659348/fast' failed
+make: *** [cmTryCompileExec2415659348/fast] Error 2
+
+
+Determining if the function rwlock_init exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1326742984/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1326742984.dir/build.make CMakeFiles/cmTryCompileExec1326742984.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1326742984.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=rwlock_init   -o CMakeFiles/cmTryCompileExec1326742984.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1326742984
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1326742984.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=rwlock_init    CMakeFiles/cmTryCompileExec1326742984.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1326742984 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1326742984.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `rwlock_init'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1326742984.dir/build.make:88: recipe for target 'cmTryCompileExec1326742984' failed
+make[1]: *** [cmTryCompileExec1326742984] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1326742984/fast' failed
+make: *** [cmTryCompileExec1326742984/fast] Error 2
+
+
+Determining if the function setfd exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec319363034/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec319363034.dir/build.make CMakeFiles/cmTryCompileExec319363034.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec319363034.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=setfd   -o CMakeFiles/cmTryCompileExec319363034.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec319363034
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec319363034.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=setfd    CMakeFiles/cmTryCompileExec319363034.dir/CheckFunctionExists.c.o  -o cmTryCompileExec319363034 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec319363034.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `setfd'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec319363034.dir/build.make:88: recipe for target 'cmTryCompileExec319363034' failed
+make[1]: *** [cmTryCompileExec319363034] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec319363034/fast' failed
+make: *** [cmTryCompileExec319363034/fast] Error 2
+
+
+Determining if the function sigthreadmask exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec664749889/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec664749889.dir/build.make CMakeFiles/cmTryCompileExec664749889.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec664749889.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sigthreadmask   -o CMakeFiles/cmTryCompileExec664749889.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec664749889
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec664749889.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sigthreadmask    CMakeFiles/cmTryCompileExec664749889.dir/CheckFunctionExists.c.o  -o cmTryCompileExec664749889 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec664749889.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `sigthreadmask'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec664749889.dir/build.make:88: recipe for target 'cmTryCompileExec664749889' failed
+make[1]: *** [cmTryCompileExec664749889] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec664749889/fast' failed
+make: *** [cmTryCompileExec664749889/fast] Error 2
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3553646911/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3553646911.dir/build.make CMakeFiles/cmTryCompileExec3553646911.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3553646911.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strlcpy   -o CMakeFiles/cmTryCompileExec3553646911.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3553646911
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3553646911.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strlcpy    CMakeFiles/cmTryCompileExec3553646911.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3553646911 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3553646911.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3553646911.dir/build.make:88: recipe for target 'cmTryCompileExec3553646911' failed
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3553646911] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec3553646911/fast' failed
+make: *** [cmTryCompileExec3553646911/fast] Error 2
+
+
+Determining if the function strlcat exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2988545514/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2988545514.dir/build.make CMakeFiles/cmTryCompileExec2988545514.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2988545514.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strlcat   -o CMakeFiles/cmTryCompileExec2988545514.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2988545514
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2988545514.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strlcat    CMakeFiles/cmTryCompileExec2988545514.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2988545514 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2988545514.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `strlcat'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2988545514.dir/build.make:88: recipe for target 'cmTryCompileExec2988545514' failed
+make[1]: *** [cmTryCompileExec2988545514] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2988545514/fast' failed
+make: *** [cmTryCompileExec2988545514/fast] Error 2
+
+
+Determining if the function fgetln exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3597762286/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3597762286.dir/build.make CMakeFiles/cmTryCompileExec3597762286.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3597762286.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fgetln   -o CMakeFiles/cmTryCompileExec3597762286.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3597762286
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3597762286.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fgetln    CMakeFiles/cmTryCompileExec3597762286.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3597762286 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3597762286.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `fgetln'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3597762286.dir/build.make:88: recipe for target 'cmTryCompileExec3597762286' failed
+make[1]: *** [cmTryCompileExec3597762286] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3597762286/fast' failed
+make: *** [cmTryCompileExec3597762286/fast] Error 2
+
+
+Determining if the function tell exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3550542688/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3550542688.dir/build.make CMakeFiles/cmTryCompileExec3550542688.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3550542688.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=tell   -o CMakeFiles/cmTryCompileExec3550542688.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3550542688
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3550542688.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=tell    CMakeFiles/cmTryCompileExec3550542688.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3550542688 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3550542688.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `tell'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3550542688.dir/build.make:88: recipe for target 'cmTryCompileExec3550542688' failed
+make[1]: *** [cmTryCompileExec3550542688] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3550542688/fast' failed
+make: *** [cmTryCompileExec3550542688/fast] Error 2
+
+
+Determining if the function thr_setconcurrency exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2828569582/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2828569582.dir/build.make CMakeFiles/cmTryCompileExec2828569582.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2828569582.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=thr_setconcurrency   -o CMakeFiles/cmTryCompileExec2828569582.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2828569582
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2828569582.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=thr_setconcurrency    CMakeFiles/cmTryCompileExec2828569582.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2828569582 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2828569582.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `thr_setconcurrency'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2828569582.dir/build.make:88: recipe for target 'cmTryCompileExec2828569582' failed
+make[1]: *** [cmTryCompileExec2828569582] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2828569582/fast' failed
+make: *** [cmTryCompileExec2828569582/fast] Error 2
+
+
+Determining if the function thr_yield exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3195655041/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3195655041.dir/build.make CMakeFiles/cmTryCompileExec3195655041.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3195655041.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=thr_yield   -o CMakeFiles/cmTryCompileExec3195655041.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3195655041
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3195655041.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=thr_yield    CMakeFiles/cmTryCompileExec3195655041.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3195655041 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3195655041.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `thr_yield'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3195655041.dir/build.make:88: recipe for target 'cmTryCompileExec3195655041' failed
+make[1]: *** [cmTryCompileExec3195655041] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3195655041/fast' failed
+make: *** [cmTryCompileExec3195655041/fast] Error 2
+
+
+Determining if the function ntohll exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3683464467/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3683464467.dir/build.make CMakeFiles/cmTryCompileExec3683464467.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3683464467.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=ntohll   -o CMakeFiles/cmTryCompileExec3683464467.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3683464467
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3683464467.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=ntohll    CMakeFiles/cmTryCompileExec3683464467.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3683464467 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3683464467.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `ntohll'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3683464467.dir/build.make:88: recipe for target 'cmTryCompileExec3683464467' failed
+make[1]: *** [cmTryCompileExec3683464467] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3683464467/fast' failed
+make: *** [cmTryCompileExec3683464467/fast] Error 2
+
+
+Determining if the function kqueue exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2027303389/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2027303389.dir/build.make CMakeFiles/cmTryCompileExec2027303389.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2027303389.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=kqueue   -o CMakeFiles/cmTryCompileExec2027303389.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2027303389
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2027303389.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=kqueue    CMakeFiles/cmTryCompileExec2027303389.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2027303389 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec2027303389.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `kqueue'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec2027303389.dir/build.make:88: recipe for target 'cmTryCompileExec2027303389' failed
+make[1]: *** [cmTryCompileExec2027303389] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2027303389/fast' failed
+make: *** [cmTryCompileExec2027303389/fast] Error 2
+
+
+Determining if the function kqueue exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3388448280/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3388448280.dir/build.make CMakeFiles/cmTryCompileExec3388448280.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3388448280.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=kqueue   -o CMakeFiles/cmTryCompileExec3388448280.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3388448280
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3388448280.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=kqueue    CMakeFiles/cmTryCompileExec3388448280.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3388448280 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec3388448280.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `kqueue'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec3388448280.dir/build.make:88: recipe for target 'cmTryCompileExec3388448280' failed
+make[1]: *** [cmTryCompileExec3388448280] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3388448280/fast' failed
+make: *** [cmTryCompileExec3388448280/fast] Error 2
+
+
+Determining if files ia64intrin.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec821748828/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec821748828.dir/build.make CMakeFiles/cmTryCompileExec821748828.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec821748828.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec821748828.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:24: fatal error: ia64intrin.h: 그런 파일이나 디렉터리가 없습니다
+ #include <ia64intrin.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec821748828.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec821748828.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec821748828.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec821748828/fast' failed
+make: *** [cmTryCompileExec821748828/fast] Error 2
+
+Source:
+/* */
+#include <ia64intrin.h>
+
+
+int main(){return 0;}
+
+Determining if the function read_real_time exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec662314596/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec662314596.dir/build.make CMakeFiles/cmTryCompileExec662314596.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec662314596.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=read_real_time   -o CMakeFiles/cmTryCompileExec662314596.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec662314596
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec662314596.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=read_real_time    CMakeFiles/cmTryCompileExec662314596.dir/CheckFunctionExists.c.o  -o cmTryCompileExec662314596 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec662314596.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `read_real_time'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec662314596.dir/build.make:88: recipe for target 'cmTryCompileExec662314596' failed
+make[1]: *** [cmTryCompileExec662314596] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec662314596/fast' failed
+make: *** [cmTryCompileExec662314596/fast] Error 2
+
+
+Determining if the function rdtscll exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1177023113/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1177023113.dir/build.make CMakeFiles/cmTryCompileExec1177023113.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1177023113.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=rdtscll   -o CMakeFiles/cmTryCompileExec1177023113.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1177023113
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1177023113.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=rdtscll    CMakeFiles/cmTryCompileExec1177023113.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1177023113 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec1177023113.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `rdtscll'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1177023113.dir/build.make:88: recipe for target 'cmTryCompileExec1177023113' failed
+make[1]: *** [cmTryCompileExec1177023113] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1177023113/fast' failed
+make: *** [cmTryCompileExec1177023113/fast] Error 2
+
+
+Determining if the TIOCSTAT exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1864845592/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1864845592.dir/build.make CMakeFiles/cmTryCompileExec1864845592.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1864845592.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1864845592.dir/CheckSymbolExists.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘TIOCSTAT’ undeclared (first use in this function)
+   return ((int*)(&TIOCSTAT))[argc];
+                   ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTryCompileExec1864845592.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1864845592.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1864845592.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1864845592/fast' failed
+make: *** [cmTryCompileExec1864845592/fast] Error 2
+
+File /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/ioctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef TIOCSTAT
+  return ((int*)(&TIOCSTAT))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the FIONREAD exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2105095403/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2105095403.dir/build.make CMakeFiles/cmTryCompileExec2105095403.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2105095403.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2105095403.dir/CheckSymbolExists.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:23: fatal error: sys/filio.h: 그런 파일이나 디렉터리가 없습니다
+ #include <sys/filio.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2105095403.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2105095403.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2105095403.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2105095403/fast' failed
+make: *** [cmTryCompileExec2105095403/fast] Error 2
+
+File /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/filio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef FIONREAD
+  return ((int*)(&FIONREAD))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec842387922/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec842387922.dir/build.make CMakeFiles/cmTryCompileExec842387922.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec842387922.dir/TestEndianess.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec842387922.dir/TestEndianess.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec842387922
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec842387922.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec842387922.dir/TestEndianess.c.o  -o cmTryCompileExec842387922 -rdynamic 
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uchar failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1545199601/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1545199601.dir/build.make CMakeFiles/cmTryCompileExec1545199601.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1545199601.dir/SIZEOF_UCHAR.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec1545199601.dir/SIZEOF_UCHAR.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:19:22: error: ‘uchar’ undeclared here (not in a function)
+ #define SIZE (sizeof(uchar))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec1545199601.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1545199601.dir/SIZEOF_UCHAR.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1545199601.dir/SIZEOF_UCHAR.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1545199601/fast' failed
+make: *** [cmTryCompileExec1545199601/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uchar))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int8 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec250552935/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec250552935.dir/build.make CMakeFiles/cmTryCompileExec250552935.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec250552935.dir/SIZEOF_INT8.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec250552935.dir/SIZEOF_INT8.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c:19:22: error: ‘int8’ undeclared here (not in a function)
+ #define SIZE (sizeof(int8))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec250552935.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec250552935.dir/SIZEOF_INT8.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec250552935.dir/SIZEOF_INT8.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec250552935/fast' failed
+make: *** [cmTryCompileExec250552935/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint8 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1014508272/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1014508272.dir/build.make CMakeFiles/cmTryCompileExec1014508272.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1014508272.dir/SIZEOF_UINT8.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec1014508272.dir/SIZEOF_UINT8.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c:19:22: error: ‘uint8’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint8))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec1014508272.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1014508272.dir/SIZEOF_UINT8.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1014508272.dir/SIZEOF_UINT8.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1014508272/fast' failed
+make: *** [cmTryCompileExec1014508272/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int16 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3007059038/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3007059038.dir/build.make CMakeFiles/cmTryCompileExec3007059038.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3007059038.dir/SIZEOF_INT16.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec3007059038.dir/SIZEOF_INT16.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c:19:22: error: ‘int16’ undeclared here (not in a function)
+ #define SIZE (sizeof(int16))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3007059038.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3007059038.dir/SIZEOF_INT16.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3007059038.dir/SIZEOF_INT16.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3007059038/fast' failed
+make: *** [cmTryCompileExec3007059038/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint16 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3855109582/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3855109582.dir/build.make CMakeFiles/cmTryCompileExec3855109582.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3855109582.dir/SIZEOF_UINT16.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec3855109582.dir/SIZEOF_UINT16.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c:19:22: error: ‘uint16’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint16))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3855109582.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3855109582.dir/SIZEOF_UINT16.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3855109582.dir/SIZEOF_UINT16.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3855109582/fast' failed
+make: *** [cmTryCompileExec3855109582/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int32 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4095733353/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4095733353.dir/build.make CMakeFiles/cmTryCompileExec4095733353.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4095733353.dir/SIZEOF_INT32.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec4095733353.dir/SIZEOF_INT32.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c:19:22: error: ‘int32’ undeclared here (not in a function)
+ #define SIZE (sizeof(int32))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec4095733353.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4095733353.dir/SIZEOF_INT32.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4095733353.dir/SIZEOF_INT32.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4095733353/fast' failed
+make: *** [cmTryCompileExec4095733353/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint32 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec385438633/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec385438633.dir/build.make CMakeFiles/cmTryCompileExec385438633.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec385438633.dir/SIZEOF_UINT32.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec385438633.dir/SIZEOF_UINT32.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c:19:22: error: ‘uint32’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint32))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec385438633.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec385438633.dir/SIZEOF_UINT32.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec385438633.dir/SIZEOF_UINT32.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec385438633/fast' failed
+make: *** [cmTryCompileExec385438633/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of int64 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4211691267/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4211691267.dir/build.make CMakeFiles/cmTryCompileExec4211691267.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4211691267.dir/SIZEOF_INT64.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec4211691267.dir/SIZEOF_INT64.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c:19:22: error: ‘int64’ undeclared here (not in a function)
+ #define SIZE (sizeof(int64))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec4211691267.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4211691267.dir/SIZEOF_INT64.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4211691267.dir/SIZEOF_INT64.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4211691267/fast' failed
+make: *** [cmTryCompileExec4211691267/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of uint64 failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3536422494/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3536422494.dir/build.make CMakeFiles/cmTryCompileExec3536422494.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3536422494.dir/SIZEOF_UINT64.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec3536422494.dir/SIZEOF_UINT64.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c:19:22: error: ‘uint64’ undeclared here (not in a function)
+ #define SIZE (sizeof(uint64))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec3536422494.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3536422494.dir/SIZEOF_UINT64.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3536422494.dir/SIZEOF_UINT64.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3536422494/fast' failed
+make: *** [cmTryCompileExec3536422494/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_UINT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "stdio.h"
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(uint64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of bool failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1135160045/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1135160045.dir/build.make CMakeFiles/cmTryCompileExec1135160045.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1135160045.dir/SIZEOF_BOOL.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec1135160045.dir/SIZEOF_BOOL.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c:18:22: error: ‘bool’ undeclared here (not in a function)
+ #define SIZE (sizeof(bool))
+                      ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c:20:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTryCompileExec1135160045.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1135160045.dir/SIZEOF_BOOL.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1135160045.dir/SIZEOF_BOOL.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1135160045/fast' failed
+make: *** [cmTryCompileExec1135160045/fast] Error 2
+
+/home/2011003230/mysql_mysrc/CMakeFiles/CheckTypeSize/SIZEOF_BOOL.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "sys/types.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(bool))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C SOURCE FILE Test TIME_T_UNSIGNED failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2182673703/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2182673703.dir/build.make CMakeFiles/cmTryCompileExec2182673703.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2182673703.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DTIME_T_UNSIGNED   -o CMakeFiles/cmTryCompileExec2182673703.dir/src.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c:5:7: error: size of array ‘array’ is negative
+   int array[(((time_t)-1) > 0) ? 1 : -1];
+       ^
+CMakeFiles/cmTryCompileExec2182673703.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2182673703.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2182673703.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2182673703/fast' failed
+make: *** [cmTryCompileExec2182673703/fast] Error 2
+
+Source file was:
+
+#include <time.h>
+int main()
+{
+  int array[(((time_t)-1) > 0) ? 1 : -1];
+  return 0;
+}
+Performing C SOURCE FILE Test HAVE_TIMESPEC_TS_SEC failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2939566680/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2939566680.dir/build.make CMakeFiles/cmTryCompileExec2939566680.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2939566680.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DHAVE_TIMESPEC_TS_SEC   -o CMakeFiles/cmTryCompileExec2939566680.dir/src.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c:7:10: error: ‘struct timespec’ has no member named ‘ts_sec’
+   abstime.ts_sec = time(NULL)+1;
+          ^
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c:8:10: error: ‘struct timespec’ has no member named ‘ts_nsec’
+   abstime.ts_nsec = 0;
+          ^
+CMakeFiles/cmTryCompileExec2939566680.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2939566680.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2939566680.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec2939566680/fast' failed
+make: *** [cmTryCompileExec2939566680/fast] Error 2
+
+Source file was:
+
+#include <pthread.h>
+
+int main(int ac, char **av)
+{
+  struct timespec abstime;
+  abstime.ts_sec = time(NULL)+1;
+  abstime.ts_nsec = 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_SOLARIS_STYLE_GETHOST failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3065552974/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3065552974.dir/build.make CMakeFiles/cmTryCompileExec3065552974.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3065552974.dir/src.cxx.o
+/usr/bin/c++   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DHAVE_SOLARIS_STYLE_GETHOST   -o CMakeFiles/cmTryCompileExec3065552974.dir/src.cxx.o -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.cxx
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.cxx:17:66: error: cannot convert ‘int*’ to ‘hostent**’ for argument ‘7’ to ‘int gethostbyaddr_r(const void*, __socklen_t, int, hostent*, char*, size_t, hostent**, int*)’
+           0, 0, (struct hostent *) 0, (char *) NULL,  0, (int *)0);
+                                                                  ^
+CMakeFiles/cmTryCompileExec3065552974.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3065552974.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3065552974.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3065552974/fast' failed
+make: *** [cmTryCompileExec3065552974/fast] Error 2
+
+Source file was:
+
+    #undef inline
+    #if !defined(SCO) && !defined(__osf__) && !defined(_REENTRANT)
+    #define _REENTRANT
+    #endif
+    #include <pthread.h>
+    #include <sys/types.h>
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <arpa/inet.h>
+    #include <netdb.h>
+    int main()
+    {
+
+       struct hostent *foo =
+       gethostbyaddr_r((const char *) 0,
+          0, 0, (struct hostent *) 0, (char *) NULL,  0, (int *)0);
+       return 0;
+    }
+  
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec484123979/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec484123979.dir/build.make CMakeFiles/cmTryCompileExec484123979.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec484123979.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -o CMakeFiles/cmTryCompileExec484123979.dir/CheckIncludeFile.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: netinet/in6.h: 그런 파일이나 디렉터리가 없습니다
+ #include <netinet/in6.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec484123979.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec484123979.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec484123979.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec484123979/fast' failed
+make: *** [cmTryCompileExec484123979/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_SOCKADDR_IN_SIN_LEN failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3240419238/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3240419238.dir/build.make CMakeFiles/cmTryCompileExec3240419238.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3240419238.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DHAVE_SOCKADDR_IN_SIN_LEN   -o CMakeFiles/cmTryCompileExec3240419238.dir/src.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c:9:7: error: ‘struct sockaddr_in’ has no member named ‘sin_len’
+    tmp->sin_len;
+       ^
+CMakeFiles/cmTryCompileExec3240419238.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3240419238.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3240419238.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3240419238/fast' failed
+make: *** [cmTryCompileExec3240419238/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+int main()
+{
+   struct sockaddr_in* tmp;
+   tmp->sin_len;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_SOCKADDR_IN6_SIN6_LEN failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1036310002/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1036310002.dir/build.make CMakeFiles/cmTryCompileExec1036310002.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1036310002.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DHAVE_SOCKADDR_IN6_SIN6_LEN   -o CMakeFiles/cmTryCompileExec1036310002.dir/src.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c:9:7: error: ‘struct sockaddr_in6’ has no member named ‘sin6_len’
+    tmp->sin6_len;
+       ^
+CMakeFiles/cmTryCompileExec1036310002.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1036310002.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1036310002.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1036310002/fast' failed
+make: *** [cmTryCompileExec1036310002/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+int main()
+{
+   struct sockaddr_in6* tmp;
+   tmp->sin6_len;
+  return 0;
+}
+
+Performing C SOURCE FILE Test STRUCT_DIRENT_HAS_D_NAMLEN failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3734425527/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3734425527.dir/build.make CMakeFiles/cmTryCompileExec3734425527.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3734425527.dir/src.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DSTRUCT_DIRENT_HAS_D_NAMLEN   -o CMakeFiles/cmTryCompileExec3734425527.dir/src.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/src.c:7:7: error: ‘struct dirent’ has no member named ‘d_namlen’
+    tmp->d_namlen;
+       ^
+CMakeFiles/cmTryCompileExec3734425527.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3734425527.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3734425527.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3734425527/fast' failed
+make: *** [cmTryCompileExec3734425527/fast] Error 2
+
+Source file was:
+
+#include <dirent.h>
+
+int main()
+{
+   struct dirent* tmp;
+   tmp->d_namlen;
+  return 0;
+}
+
+Determining if the function mbscmp exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec486092107/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec486092107.dir/build.make CMakeFiles/cmTryCompileExec486092107.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec486092107.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DCHECK_FUNCTION_EXISTS=mbscmp   -o CMakeFiles/cmTryCompileExec486092107.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec486092107
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec486092107.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=mbscmp    CMakeFiles/cmTryCompileExec486092107.dir/CheckFunctionExists.c.o  -o cmTryCompileExec486092107 -rdynamic -lm -lcrypt -ldl -lpthread 
+CMakeFiles/cmTryCompileExec486092107.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `mbscmp'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec486092107.dir/build.make:88: recipe for target 'cmTryCompileExec486092107' failed
+make[1]: *** [cmTryCompileExec486092107] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec486092107/fast' failed
+make: *** [cmTryCompileExec486092107/fast] Error 2
+
+
+Determining if the function strvis exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1509378232/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1509378232.dir/build.make CMakeFiles/cmTryCompileExec1509378232.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1509378232.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DCHECK_FUNCTION_EXISTS=strvis   -o CMakeFiles/cmTryCompileExec1509378232.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1509378232
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1509378232.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strvis    CMakeFiles/cmTryCompileExec1509378232.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1509378232 -rdynamic 
+CMakeFiles/cmTryCompileExec1509378232.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `strvis'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1509378232.dir/build.make:88: recipe for target 'cmTryCompileExec1509378232' failed
+make[1]: *** [cmTryCompileExec1509378232] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1509378232/fast' failed
+make: *** [cmTryCompileExec1509378232/fast] Error 2
+
+
+Determining if the function strunvis exists failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4151638907/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4151638907.dir/build.make CMakeFiles/cmTryCompileExec4151638907.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4151638907.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DCHECK_FUNCTION_EXISTS=strunvis   -o CMakeFiles/cmTryCompileExec4151638907.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec4151638907
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4151638907.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strunvis    CMakeFiles/cmTryCompileExec4151638907.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4151638907 -rdynamic 
+CMakeFiles/cmTryCompileExec4151638907.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x12): undefined reference to `strunvis'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec4151638907.dir/build.make:88: recipe for target 'cmTryCompileExec4151638907' failed
+make[1]: *** [cmTryCompileExec4151638907] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec4151638907/fast' failed
+make: *** [cmTryCompileExec4151638907/fast] Error 2
+
+
+Determining if files libaio.h exist failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3340043699/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3340043699.dir/build.make CMakeFiles/cmTryCompileExec3340043699.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3340043699.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wformat-security -Wvla -Wwrite-strings -Wdeclaration-after-statement    -o CMakeFiles/cmTryCompileExec3340043699.dir/CheckIncludeFiles.c.o   -c /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: libaio.h: 그런 파일이나 디렉터리가 없습니다
+ #include <libaio.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3340043699.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3340043699.dir/CheckIncludeFiles.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3340043699.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec3340043699/fast' failed
+make: *** [cmTryCompileExec3340043699/fast] Error 2
+
+Source:
+/* */
+#include <libaio.h>
+
+
+int main(){return 0;}
+
+Determining if the function io_queue_init exists in the aio failed with the following output:
+Change Dir: /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1465791497/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1465791497.dir/build.make CMakeFiles/cmTryCompileExec1465791497.dir/build
+make[1]: Entering directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1465791497.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGE_FILES -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -Wall -Wextra -Wformat-security -Wvla -Wwrite-strings -Wdeclaration-after-statement -DCHECK_FUNCTION_EXISTS=io_queue_init   -o CMakeFiles/cmTryCompileExec1465791497.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1465791497
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1465791497.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wextra -Wformat-security -Wvla -Wwrite-strings -Wdeclaration-after-statement -DCHECK_FUNCTION_EXISTS=io_queue_init    CMakeFiles/cmTryCompileExec1465791497.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1465791497 -rdynamic -laio -lm -lcrypt -ldl -lpthread 
+/usr/bin/ld: cannot find -laio
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1465791497.dir/build.make:88: recipe for target 'cmTryCompileExec1465791497' failed
+make[1]: Leaving directory '/home/2011003230/mysql_mysrc/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1465791497] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1465791497/fast' failed
+make: *** [cmTryCompileExec1465791497/fast] Error 2
+
+

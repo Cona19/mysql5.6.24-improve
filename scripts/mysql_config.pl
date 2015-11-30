@@ -148,18 +148,18 @@ sub quote_options {
 my $me = get_full_path($0);
 $basedir = dirname(dirname($me)); # Remove "/bin/mysql_config" part
 
-my $ldata   = '/home/2011003230/mysql-5.6.24/data';
-my $execdir = '/home/2011003230/mysql-5.6.24/bin';
-my $bindir  = '/home/2011003230/mysql-5.6.24/bin';
+my $ldata   = '/home/2011003230/mysql_run/data';
+my $execdir = '/home/2011003230/mysql_run/bin';
+my $bindir  = '/home/2011003230/mysql_run/bin';
 
 # ----------------------------------------------------------------------
 # If installed, search for the compiled in directory first (might be "lib64")
 # ----------------------------------------------------------------------
 
-my $pkglibdir = fix_path('/home/2011003230/mysql-5.6.24/lib',"libmysql/relwithdebinfo",
+my $pkglibdir = fix_path('/home/2011003230/mysql_run/lib',"libmysql/relwithdebinfo",
                          "libmysql/release","libmysql/debug","lib/mysql","lib");
 
-my $pkgincludedir = fix_path('/home/2011003230/mysql-5.6.24/include', "include/mysql", "include");
+my $pkgincludedir = fix_path('/home/2011003230/mysql_run/include', "include/mysql", "include");
 
 # Assume no argument with space in it
 my @ldflags = split(" ",'');

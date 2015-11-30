@@ -1,0 +1,1 @@
+cd /home/2011003230/mysql_mysrc && '/usr/bin/cpack' -G TGZ --config CPackConfig.cmake
