@@ -828,18 +828,19 @@ os_fast_mutex_init_func(
 #else
 	ut_a(0 == pthread_mutex_init(fast_mutex, MY_MUTEX_INIT_FAST));
 #endif
-	if (UNIV_LIKELY(os_sync_mutex_inited)) {
-		/* When creating os_sync_mutex itself (in Unix) we cannot
-		reserve it */
+	/*if (UNIV_LIKELY(os_sync_mutex_inited)) {
+		// When creating os_sync_mutex itself (in Unix) we cannot
+		// reserve it 
 
 		os_mutex_enter(os_sync_mutex);
-	}
+	}*/
 
-	os_fast_mutex_count++;
+	//os_fast_mutex_count++;
+	__sync_fetch_and_add(&os_fast_mutex_count, 1);
 
-	if (UNIV_LIKELY(os_sync_mutex_inited)) {
+	/*if (UNIV_LIKELY(os_sync_mutex_inited)) {
 		os_mutex_exit(os_sync_mutex);
-	}
+	}*/
 }
 
 /**********************************************************//**
