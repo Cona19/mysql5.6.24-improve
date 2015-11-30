@@ -1737,6 +1737,9 @@ innobase_start_or_create_for_mysql(void)
 	srv_use_native_aio = FALSE;
 #endif /* __WIN__ */
 
+	//added to initialize before log print
+	os_event_malloc_init();
+
 	if (srv_file_flush_method_str == NULL) {
 		/* These are the default options */
 
@@ -1945,8 +1948,6 @@ innobase_start_or_create_for_mysql(void)
 		unit = 'M';
 	}
 
-	//added to initialize before log print
-	os_event_malloc_init();
 
 	/* Print time to initialize the buffer pool */
 	
