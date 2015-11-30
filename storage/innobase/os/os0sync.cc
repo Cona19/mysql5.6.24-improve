@@ -340,84 +340,25 @@ os_sync_free(void)
 	os_sync_free_called = FALSE;
 }
 
-#define SIZE_OS_EVENT_POOL 45400000
+#define SIZE_OS_EVENT_POOL 50000000
 
-/*typedef struct os_event_list_{
-	os_event_pool *val;
-	struct os_event_list_ *next;
-}os_event_list;
-
-typedef struct os_event_pool_{
-	os_event_list pool[SIZE_OS_EVENT_POOL];
-	struct os_event_pool_ *next;
-}os_event_pool;
-
-
-os_event_pool *os_event_pool_head;
-os_event_list *os_event_free_head;
-int pool_semaphore = 1;
-
-UNIV_INTERN void os_event_malloc_init(void){
-	int i;
-	int getLock = 0;
-	os_event_pool *newNode;
-
-	getLock = __sync_test_and_set(&pool_semaphore, 0);
-	if (getLock){
-		newNode = static_cast<os_event_pool*>(ut_malloc(sizeof(os_event_pool));
-		for (i = 0; i < SIZE_OS_EVENT_POOL-1; i++){
-			newNode->pool[i].next = &(newNode->pool[i+1]);
-		}
-		newNode->next = os_event_pool_head;
-		os_event_pool_head = newNode;
-		newNode->pool[SIZE_OS_EVENT_POOL-1].next = os_event_free_head;
-		os_event_free_head = &(newNode->pool[0]);
-		getLock = __sync_test_and_set(&pool_semaphore, 1);
-	}
-	else{
-		while(!getLock);
-	}
-}
-
-UNIV_INTERN void os_event_malloc_free(void){
-	os_event_pool *next;
-	while(os_event_pool_head != NULL){
-		next = os_event_pool_head->next;
-		ut_free(os_event_pool_head); 
-		os_event_pool_head = next;
-	}
-}
-
-UNIV_INTERN os_event_t os_event_malloc(){
-	os_event_list *res = os_event_free_head;
-	if (res == 0){
-		os_event_malloc_init();
-	}
-	while(!__sync_bool_compare_and_swap(&os_event_free_head, res, res->next)){
-		res = os_event_free_head;
-	}
-	return res;
-}*/
 static os_event_t os_event_pool[SIZE_OS_EVENT_POOL];
-static int cnt;
-
+static unsigned int cnt = SIZE_OS_EVENT_POOL;
 UNIV_INTERN void os_event_malloc_init(void){
 	int i;
 	for (i = 0; i < SIZE_OS_EVENT_POOL; i++){
-		os_event_pool[i] = static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
+		os_event_pool[i] = os_event_create();
 	}
 	cnt = 0;
 }
 
 UNIV_INLINE os_event_t os_event_malloc(){
-	int x;
-	if (cnt < SIZE_OS_EVENT_POOL){
-		x = __sync_fetch_and_add(&cnt, 1);
-		if (x < SIZE_OS_EVENT_POOL){ 
-			return os_event_pool[x];
-		}
+	unsigned int x;
+	x = __sync_fetch_and_add(&cnt, 1);
+	if (x < SIZE_OS_EVENT_POOL){ 
+		return os_event_pool[x];
 	}
-	return static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
+	return os_event_create();
 }
 
 /*********************************************************//**
@@ -435,7 +376,7 @@ os_event_create(void)
 #ifdef __WIN__
 	if(!srv_use_native_conditions) {
 
-		event = os_event_malloc();//static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
+		event = static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
 
 		event->handle = CreateEvent(NULL, TRUE, FALSE, NULL);
 		if (!event->handle) {
@@ -447,7 +388,7 @@ os_event_create(void)
 	} else /* Windows with condition variables */
 #endif
 	{
-		event = os_event_malloc();//static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
+		event = static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
 
 #ifndef PFS_SKIP_EVENT_MUTEX
 		os_fast_mutex_init(event_os_mutex_key, &event->os_mutex);
