@@ -340,26 +340,35 @@ os_sync_free(void)
 	os_sync_free_called = FALSE;
 }
 
-#define SIZE_OS_EVENT_POOL 50000000
+#define SIZE_OS_EVENT_POOL 45500000
 
 static os_event_t os_event_pool[SIZE_OS_EVENT_POOL];
-static unsigned int cnt = SIZE_OS_EVENT_POOL;
+static unsigned int cnt;
+
+UNIV_INTERN os_event_t (*os_event_malloc)(void) = os_event_create;
+
+UNIV_INTERN os_event_t os_event_malloc_from_pool(){
+	unsigned int x;
+	x = __sync_fetch_and_add(&cnt, 1);
+	if (x < SIZE_OS_EVENT_POOL){ 
+		return os_event_pool[x];
+	}
+	else{
+		os_event_malloc = os_event_create;
+	}
+	return os_event_create();
+}
+
 UNIV_INTERN void os_event_malloc_init(void){
 	int i;
 	for (i = 0; i < SIZE_OS_EVENT_POOL; i++){
 		os_event_pool[i] = os_event_create();
 	}
 	cnt = 0;
+	os_event_malloc = os_event_malloc_from_pool;	
 }
 
-UNIV_INTERN os_event_t os_event_malloc(){
-	unsigned int x;
-	x = __sync_fetch_and_add(&cnt, 1);
-	if (x < SIZE_OS_EVENT_POOL){ 
-		return os_event_pool[x];
-	}
-	return os_event_create();
-}
+
 
 /*********************************************************//**
 Creates an event semaphore, i.e., a semaphore which may just have two
