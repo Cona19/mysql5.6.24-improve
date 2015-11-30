@@ -1445,16 +1445,13 @@ buf_pool_init(
 		pthread_join(threads[i], (void**)&thread_return[i]);
 		//fprintf(stderr, "%lu 스레드 종료\n", i);
 		if (thread_return[i] != DB_SUCCESS){
-			if (init_result == DB_SUCCESS){
-				init_result = thread_return[i];
-			}
-
-			/* Free all the instances created so far. */
+			init_result = thread_return[i];
 		}
 	}
 	//fprintf(stderr, "멀티스레딩 join 완료\n");
 
 	if (init_result != DB_SUCCESS){
+		/* Free all the instances created so far. */
 		//fprintf(stderr, "멀티스레딩 buf_pool_init_instance 실패\n");
 		for (i = 0; i < n_instances; i++){
 			if (thread_return[i] == DB_SUCCESS){
