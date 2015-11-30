@@ -116,6 +116,11 @@ Frees created events and OS 'slow' mutexes. */
 UNIV_INTERN
 void
 os_sync_free(void);
+
+UNIV_INTERN void os_event_malloc_init(void);
+
+UNIV_INTERN os_event_t os_event_malloc();
+
 /*==============*/
 /*********************************************************//**
 Creates an event semaphore, i.e., a semaphore which may just have two states:

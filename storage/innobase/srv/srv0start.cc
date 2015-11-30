@@ -1820,7 +1820,7 @@ innobase_start_or_create_for_mysql(void)
 	}
 	else{
 		srv_buf_pool_instances = sysconf(_SC_NPROCESSORS_ONLN);
-		fprintf(stderr, "srv_buf_pool_instances 값 : %lu\n", srv_buf_pool_instances);
+		//fprintf(stderr, "srv_buf_pool_instances 값 : %lu\n", srv_buf_pool_instances);
 	}
 
 	srv_boot();
@@ -1944,8 +1944,11 @@ innobase_start_or_create_for_mysql(void)
 		size = ((double) srv_buf_pool_size) / (1024 * 1024);
 		unit = 'M';
 	}
+	//added to initialize before log print
+	os_event_malloc_init();
 
 	/* Print time to initialize the buffer pool */
+	
 	ib_logf(IB_LOG_LEVEL_INFO,
 		"Initializing buffer pool, size = %.1f%c", size, unit);
 

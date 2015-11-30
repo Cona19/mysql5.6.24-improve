@@ -279,7 +279,7 @@ mutex_create_func(
 	os_fast_mutex_init(PFS_NOT_INSTRUMENTED, &mutex->os_fast_mutex);
 	mutex->lock_word = 0;
 #endif
-	mutex->event = os_event_create();
+	mutex->event = os_event_malloc();//os_event_create();
 	mutex_set_waiters(mutex, 0);
 #ifdef UNIV_DEBUG
 	mutex->magic_n = MUTEX_MAGIC_N;
@@ -307,14 +307,15 @@ mutex_create_func(
 		return;
 	}
 
-	mutex_enter(&mutex_list_mutex);
+	//------- I think this part is very important because this mutex makes convoy effect!!!
+	//mutex_enter(&mutex_list_mutex);
 
-	ut_ad(UT_LIST_GET_LEN(mutex_list) == 0
-	      || UT_LIST_GET_FIRST(mutex_list)->magic_n == MUTEX_MAGIC_N);
+	ut_ad(UT_LIST_GET_LEN_CONCUR(mutex_list) == 0
+	      || UT_LIST_GET_FIRST_CONCUR(mutex_list)->magic_n == MUTEX_MAGIC_N);
 
-	UT_LIST_ADD_FIRST(list, mutex_list, mutex);
+	UT_LIST_ADD_FIRST_CONCUR(list, mutex_list, mutex);
 
-	mutex_exit(&mutex_list_mutex);
+	//mutex_exit(&mutex_list_mutex);
 }
 
 /******************************************************************//**

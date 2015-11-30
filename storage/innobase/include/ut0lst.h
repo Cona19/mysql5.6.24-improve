@@ -142,6 +142,31 @@ ut_list_prepend(
 	++list.count;
 }
 
+template <typename List, typename Type>
+void
+ut_list_prepend_concur(
+	List&		list,
+	Type&		elem,
+	size_t		offset)
+{
+	ut_list_node<Type>&	elem_node = ut_elem_get_node(elem, offset);
+
+ 	elem_node.prev = 0;
+	elem_node.next = __sync_lock_test_and_set(&list.start, &elem);
+
+	if (elem_node.next != 0){
+		ut_list_node<Type>&	base_node =
+			ut_elem_get_node(*elem_node.next, offset);
+
+		base_node.prev = &elem;
+	}
+	else{
+		list.end = &elem;
+	}
+
+	__sync_fetch_and_add(&list.count, 1);
+}
+
 /*******************************************************************//**
 Adds the node as the first element in a two-way linked list.
 @param NAME	list name
@@ -149,6 +174,9 @@ Adds the node as the first element in a two-way linked list.
 @param ELEM	the element to add */
 #define UT_LIST_ADD_FIRST(NAME, LIST, ELEM)	\
 	ut_list_prepend(LIST, *ELEM, IB_OFFSETOF(ELEM, NAME))
+
+#define UT_LIST_ADD_FIRST_CONCUR(NAME, LIST, ELEM)	\
+	ut_list_prepend_concur(LIST, *ELEM, IB_OFFSETOF(ELEM, NAME))
 
 /*******************************************************************//**
 Adds the node as the last element in a two-way linked list.
@@ -325,12 +353,19 @@ its length.
 #define UT_LIST_GET_LEN(BASE)\
 	(BASE).count
 
+#define UT_LIST_GET_LEN_CONCUR(BASE)\
+	/*__sync_fetch_and_add(&(*/(BASE).count//), 0)
+
 /********************************************************************//**
 Gets the first node in a two-way list.
 @param BASE	the base node (not a pointer to it)
 @return		first node, or NULL if the list is empty */
 #define UT_LIST_GET_FIRST(BASE)\
 	(BASE).start
+
+#define UT_LIST_GET_FIRST_CONCUR(BASE)\
+	/*__sync_fetch_and_add(&(*/(BASE).start//), 0)
+	
 
 /********************************************************************//**
 Gets the last node in a two-way list.

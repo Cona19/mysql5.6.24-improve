@@ -340,6 +340,27 @@ os_sync_free(void)
 	os_sync_free_called = FALSE;
 }
 
+#define SIZE_OS_EVENT_POOL 50000000
+
+static os_event_t os_event_pool[SIZE_OS_EVENT_POOL];
+static unsigned int cnt = SIZE_OS_EVENT_POOL;
+UNIV_INTERN void os_event_malloc_init(void){
+	int i;
+	for (i = 0; i < SIZE_OS_EVENT_POOL; i++){
+		os_event_pool[i] = os_event_create();
+	}
+	cnt = 0;
+}
+
+UNIV_INTERN os_event_t os_event_malloc(){
+	unsigned int x;
+	x = __sync_fetch_and_add(&cnt, 1);
+	if (x < SIZE_OS_EVENT_POOL){ 
+		return os_event_pool[x];
+	}
+	return os_event_create();
+}
+
 /*********************************************************//**
 Creates an event semaphore, i.e., a semaphore which may just have two
 states: signaled and nonsignaled. The created event is manual reset: it
@@ -355,7 +376,7 @@ os_event_create(void)
 #ifdef __WIN__
 	if(!srv_use_native_conditions) {
 
-		event = static_cast<os_event_t>(ut_malloc(sizeof(*event)));
+		event = static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
 
 		event->handle = CreateEvent(NULL, TRUE, FALSE, NULL);
 		if (!event->handle) {
@@ -367,7 +388,7 @@ os_event_create(void)
 	} else /* Windows with condition variables */
 #endif
 	{
-		event = static_cast<os_event_t>(ut_malloc(sizeof *event));
+		event = static_cast<os_event_t>(ut_malloc(sizeof(os_event)));
 
 #ifndef PFS_SKIP_EVENT_MUTEX
 		os_fast_mutex_init(event_os_mutex_key, &event->os_mutex);
@@ -391,18 +412,20 @@ os_event_create(void)
 	/* The os_sync_mutex can be NULL because during startup an event
 	can be created [ because it's embedded in the mutex/rwlock ] before
 	this module has been initialized */
-	if (os_sync_mutex != NULL) {
+	/*if (os_sync_mutex != NULL) {
 		os_mutex_enter(os_sync_mutex);
-	}
+	}*/
 
 	/* Put to the list of events */
-	UT_LIST_ADD_FIRST(os_event_list, os_event_list, event);
+	//UT_LIST_ADD_FIRST(os_event_list, os_event_list, event);
+	UT_LIST_ADD_FIRST_CONCUR(os_event_list, os_event_list, event);
 
-	os_event_count++;
+	//os_event_count++;
+	__sync_fetch_and_add(&os_event_count, 1);
 
-	if (os_sync_mutex != NULL) {
+	/*if (os_sync_mutex != NULL) {
 		os_mutex_exit(os_sync_mutex);
-	}
+	}*/
 
 	return(event);
 }
@@ -539,6 +562,7 @@ os_event_free(
 
 	ut_free(event);
 }
+
 
 /**********************************************************//**
 Waits for an event object until it is in the signaled state.
@@ -827,18 +851,19 @@ os_fast_mutex_init_func(
 #else
 	ut_a(0 == pthread_mutex_init(fast_mutex, MY_MUTEX_INIT_FAST));
 #endif
-	if (UNIV_LIKELY(os_sync_mutex_inited)) {
-		/* When creating os_sync_mutex itself (in Unix) we cannot
-		reserve it */
+	/*if (UNIV_LIKELY(os_sync_mutex_inited)) {
+		// When creating os_sync_mutex itself (in Unix) we cannot
+		// reserve it 
 
 		os_mutex_enter(os_sync_mutex);
-	}
+	}*/
 
-	os_fast_mutex_count++;
+	//os_fast_mutex_count++;
+	__sync_fetch_and_add(&os_fast_mutex_count, 1);
 
-	if (UNIV_LIKELY(os_sync_mutex_inited)) {
+	/*if (UNIV_LIKELY(os_sync_mutex_inited)) {
 		os_mutex_exit(os_sync_mutex);
-	}
+	}*/
 }
 
 /**********************************************************//**

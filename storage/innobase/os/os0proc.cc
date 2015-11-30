@@ -108,9 +108,10 @@ os_mem_alloc_large(
 
 	if (ptr) {
 		*n = size;
-		os_fast_mutex_lock(&ut_list_mutex);
-		ut_total_allocated_memory += size;
-		os_fast_mutex_unlock(&ut_list_mutex);
+		//os_fast_mutex_lock(&ut_list_mutex);
+		//ut_total_allocated_memory += size;
+		__sync_fetch_and_add(&ut_total_allocated_memory, size);
+		//os_fast_mutex_unlock(&ut_list_mutex);
 		UNIV_MEM_ALLOC(ptr, size);
 		return(ptr);
 	}
@@ -137,9 +138,10 @@ skip:
 			" Windows error %lu\n",
 			(ulong) size, (ulong) GetLastError());
 	} else {
-		os_fast_mutex_lock(&ut_list_mutex);
-		ut_total_allocated_memory += size;
-		os_fast_mutex_unlock(&ut_list_mutex);
+		//os_fast_mutex_lock(&ut_list_mutex);
+		//ut_total_allocated_memory += size;
+		__sync_fetch_and_add(&ut_total_allocated_memory, size);
+		//os_fast_mutex_unlock(&ut_list_mutex);
 		UNIV_MEM_ALLOC(ptr, size);
 	}
 #elif !defined OS_MAP_ANON
@@ -162,9 +164,10 @@ skip:
 			(ulong) size, (ulong) errno);
 		ptr = NULL;
 	} else {
-		os_fast_mutex_lock(&ut_list_mutex);
-		ut_total_allocated_memory += size;
-		os_fast_mutex_unlock(&ut_list_mutex);
+		//os_fast_mutex_lock(&ut_list_mutex);
+		//ut_total_allocated_memory += size;
+		__sync_fetch_and_add(&ut_total_allocated_memory, size);
+		//os_fast_mutex_unlock(&ut_list_mutex);
 		UNIV_MEM_ALLOC(ptr, size);
 	}
 #endif
