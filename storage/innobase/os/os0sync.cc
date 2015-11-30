@@ -391,18 +391,19 @@ os_event_create(void)
 	/* The os_sync_mutex can be NULL because during startup an event
 	can be created [ because it's embedded in the mutex/rwlock ] before
 	this module has been initialized */
-	if (os_sync_mutex != NULL) {
+	/*if (os_sync_mutex != NULL) {
 		os_mutex_enter(os_sync_mutex);
-	}
+	}*/
 
 	/* Put to the list of events */
-	UT_LIST_ADD_FIRST(os_event_list, os_event_list, event);
+	UT_LIST_ADD_FIRST_CONCUR(os_event_list, os_event_list, event);
 
-	os_event_count++;
+	//os_event_count++;
+	__sync_fetch_and_add(&os_event_count, 1);
 
-	if (os_sync_mutex != NULL) {
+	/*if (os_sync_mutex != NULL) {
 		os_mutex_exit(os_sync_mutex);
-	}
+	}*/
 
 	return(event);
 }
